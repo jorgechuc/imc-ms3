@@ -7,69 +7,75 @@
              Shell.TitleColor="White">
 
     <ScrollView>
-    <VerticalStackLayout
-        Margin="24"
-        Spacing="24">
-        <Border
-            Stroke="LightGray"
-            Padding="16">
-            <VerticalStackLayout
-                Spacing="8">
-                <Label
-                    Text="Peso en kilogramos:"
-                    FontSize="Small"/>
-                <Entry 
-                    FontSize="Small"/>
-                <Label
-                    Text="Estatura en metros:"
-                    FontSize="Small"/>
-                <Entry 
-                    FontSize="Small"/>
-            </VerticalStackLayout>
-        </Border>
+        <VerticalStackLayout
+            Margin="24"
+            Spacing="24">
+            <Border
+                Stroke="LightGray"
+                Padding="16">
+                <VerticalStackLayout
+                    Spacing="8">
+                    <Label
+                        Text="Peso en kilogramos:"
+                        FontSize="Small"/>
+                    <Entry 
+                        FontSize="Small"
+                        x:Name="PesoEntry"/>
+                    <Label
+                        Text="Estatura en metros:"
+                        FontSize="Small"/>
+                    <Entry 
+                        FontSize="Small"
+                        x:Name="EstaturaEntry"/>
+                </VerticalStackLayout>
+            </Border>
 
-        <HorizontalStackLayout
-            HorizontalOptions="Center"
-            Spacing="36">
-            <Button
-                Text="Calcular"
-                FontSize="Small"/>
-            <Button
-                Text="Limpiar"
-                FontSize="Small"/>
-        </HorizontalStackLayout>
+            <HorizontalStackLayout
+                HorizontalOptions="Center"
+                Spacing="36">
+                <Button
+                    Text="Calcular"
+                    FontSize="Small"
+                    Clicked="OnCalcularButtonClicked"/>
+                <Button
+                    Text="Limpiar"
+                    FontSize="Small"
+                    Clicked="OnLimpiarButtonClicked"/>
+            </HorizontalStackLayout>
 
-        <Border
-            Stroke="LightGray"
-            Padding="16">
-            
-            <Border.StrokeShape>
-                <RoundRectangle CornerRadius="10"/>
-            </Border.StrokeShape>
-            
-            <VerticalStackLayout
-                Spacing="4">
-                <Label
-                    Text="El índice de masa corporal de la persona es:"
-                    FontSize="Small"/>
-                <Label
-                    Text="24.1234"
-                    FontSize="Medium"
-                    FontAttributes="Bold"
-                    HorizontalOptions="Center"/>
-                <Label
-                    Text="La situación nutricional de la persona es:"
-                    FontSize="Small"/>
-                <Label
-                    Text="Peso normal"
-                    FontSize="Medium"
-                    FontAttributes="Bold"
-                    HorizontalOptions="Center"/>
-            </VerticalStackLayout>
-            
-        </Border>
-        
-    </VerticalStackLayout>
+            <Border
+                Stroke="LightGray"
+                Padding="16">
+
+                <Border.StrokeShape>
+                    <RoundRectangle CornerRadius="10"/>
+                </Border.StrokeShape>
+
+                <VerticalStackLayout
+                    Spacing="4">
+                    <Label
+                        Text="El índice de masa corporal de la persona es:"
+                        FontSize="Small"/>
+                    <Label
+                        Text="24.1234"
+                        FontSize="Medium"
+                        FontAttributes="Bold"
+                        HorizontalOptions="Center"
+                        x:Name="ImcLabel"/>
+                    <Label
+                        Text="La situación nutricional de la persona es:"
+                        FontSize="Small"/>
+                    <Label
+                        Text="Peso normal"
+                        FontSize="Medium"
+                        FontAttributes="Bold"
+                        HorizontalOptions="Center"
+                        x:Name="SituacionNutricionalLabel"/>
+                </VerticalStackLayout>
+
+            </Border>
+
+        </VerticalStackLayout>
     </ScrollView>
 
 </ContentPage>
