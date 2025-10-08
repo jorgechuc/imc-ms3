@@ -6,10 +6,7 @@
 		{
 			InitializeComponent();
 
-			PesoEntry.Text = string.Empty;
-			EstaturaEntry.Text = string.Empty;
-			ImcLabel.Text = string.Empty;
-			SituacionNutricionalLabel.Text = string.Empty;
+			LimpiarInformacion();
 		}
 
 		private void OnCalcularButtonClicked(object sender, EventArgs e)
@@ -22,6 +19,11 @@
 		}
 
 		private void OnLimpiarButtonClicked(object sender, EventArgs e)
+		{
+			LimpiarInformacion();
+		}
+
+		private void LimpiarInformacion()
 		{
 			PesoEntry.Text = string.Empty;
 			EstaturaEntry.Text = string.Empty;
